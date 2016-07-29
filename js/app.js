@@ -1,12 +1,12 @@
 /* app.js
  *
- * This is our RSS feed reader application. It uses the Google
- * Feed Reader API to grab RSS feeds as JSON object we can make
+ * This is the RSS feed reader application. It uses the Google
+ * Feed Reader API to grab RSS feeds as JSON objects that can be made
  * use of. It also uses the Handlebars templating library and
  * jQuery.
  */
 
-// The names and URLs to all of the feeds we'd like available.
+// The names and URLs to all of the feeds initially available.
 var allFeeds = [
     {
         name: 'Udacity Blog',
@@ -23,12 +23,12 @@ var allFeeds = [
     }
 ];
 
-/* This function starts up our application. The Google Feed
+/* This function starts up the application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
  */
 function init() {
-    // Load the first feed we've defined (index of 0).
+    // Load the first feed that's defined (index of 0).
     loadFeed(0);
 }
 
@@ -60,8 +60,8 @@ function init() {
                  title.html(feedName);   // Set the header text
                  container.empty();      // Empty out all previous entries
 
-                 /* Loop through the entries we just loaded via the Google
-                  * Feed Reader API. We'll then parse that entry against the
+                 /* Loop through the entries that just loaded via the Google
+                  * Feed Reader API. Then parse that entry against the
                   * entryTemplate (created above using Handlebars) and append
                   * the resulting HTML to the list of entries on the page.
                   */
@@ -74,7 +74,7 @@ function init() {
                  }
                },
        error: function (result, status, err){
-                 //run only the callback without attempting to parse result due to error
+                 //r un only the callback without attempting to parse result due to error
                  if (cb) {
                      cb();
                  }
@@ -89,8 +89,8 @@ function init() {
 google.load('feeds', '1');
 google.setOnLoadCallback(init);
 
-/* All of this functionality is heavily reliant upon the DOM, so we
- * place our code in the $() function to ensure it doesn't execute
+/* All of this functionality is heavily reliant upon the DOM, so
+ * the code is placed in the $() function to ensure it doesn't execute
  * until the DOM is ready.
  */
 $(function() {
@@ -100,7 +100,7 @@ $(function() {
         feedId = 0,
         menuIcon = $('.menu-icon-link');
 
-    /* Loop through all of our feeds, assigning an id property to
+    /* Loop through all of the feeds, assigning an id property to
      * each of the feeds based upon its index within the array.
      * Then parse that feed against the feedItemTemplate (created
      * above using Handlebars) and append it to the list of all
@@ -113,8 +113,8 @@ $(function() {
         feedId++;
     });
 
-    /* When a link in our feedList is clicked on, we want to hide
-     * the menu, load the feed, and prevent the default action
+    /* When a link in the feedList is clicked on, it hides
+     * the menu, loads the feed, and prevents the default action
      * (following the link) from occurring.
      */
     feedList.on('click', 'a', function() {
@@ -125,8 +125,8 @@ $(function() {
         return false;
     });
 
-    /* When the menu icon is clicked on, we need to toggle a class
-     * on the body to perform the hiding/showing of our menu.
+    /* When the menu icon is clicked on, it needs to toggle a class
+     * on the body to perform the hiding/showing of the menu.
      */
     menuIcon.on('click', function() {
         $('body').toggleClass('menu-hidden');
