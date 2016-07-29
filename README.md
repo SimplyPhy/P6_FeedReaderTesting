@@ -3,7 +3,7 @@ ___
 ##Project 6 for Udacity Front-End Nanodegree
 
 ####Assignment:
-Use Jasmine to run specified tests on a supplied RSS feed-reading app to ensure the app is functioning the way the original developer intended.
+Use Jasmine to run specified tests on an existing RSS feed-reading app to ensure it's functioning the way the original developer intended.
 
 ####Instructions to run:
 <ol>
