@@ -8,5 +8,5 @@ Use Jasmine to run specified tests on an RSS reading app, including AJAX calls, 
 ####Instructions to run:
 1. Clone or download Repo.
 2. Load index.html in your preferred browser.
-OR
-1. Open the link [here]().
+<br>OR<br>
+1. The test page is linked [here](https://simplyphy.github.io/P6_FeedReaderTesting/).
