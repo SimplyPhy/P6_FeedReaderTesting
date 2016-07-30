@@ -17,32 +17,23 @@ $(function() {
         });
 
         it('each have a non-empty URL', function() {
-            var hasUrl = function() {
-                var url;
 
-                allFeeds.forEach(function(index) {
-                    url = index.url;
+                allFeeds.forEach(function(feed) {
+
+                    expect(feed.url).toBeDefined();
+                    expect(feed.url).not.toBe("");
                 });
-                return url;
-            };
-            expect(hasUrl()).toBeDefined(true);
-            expect(hasUrl()).not.toBe("");
         });
 
         /* Same test as last spec, except checks for
          * name properties this time.
          */
         it('each have a non-empty name', function() {
-            var hasName = function() {
-                var name;
 
-                allFeeds.forEach(function(index) {
-                    name = index.url;
+                allFeeds.forEach(function(feed) {
+                    expect(feed.name).toBeDefined();
+                    expect(feed.name).not.toBe("");
                 });
-                return name;
-            };
-            expect(hasName()).toBeDefined(true);
-            expect(hasName()).not.toBe("");
         });
     });
 
