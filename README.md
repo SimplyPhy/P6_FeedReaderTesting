@@ -8,6 +8,7 @@ Build a Jasmine testing suite and use it to ensure an existing RSS feed-reading 
 #### Instructions to run:
 
 The page is linked [here](https://simplyphy.github.io/P6_FeedReaderTesting/).  
+*Scroll to the bottom of the page to see the Jasmine test results.
   
 or
 
